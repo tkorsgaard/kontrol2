@@ -1,0 +1,22 @@
+ {% load staticfiles %}
+<html>
+  <head>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+          rel="stylesheet" media="screen">
+  </head>
+
+  <body>
+
+    {% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+            {% block content %}
+    {% endblock %}
+
+{% else %}
+    <p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

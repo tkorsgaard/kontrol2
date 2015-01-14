@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+    <p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+<h1>Events</h1>
+
+<ul>
+  {% for event in object_list %}
+    <li class="event">{{ event }} </li>
+  {% endfor %}
+</ul>
+
+
+
+{% endblock %}

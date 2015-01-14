@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>Trips</h1>
+
+<ul>
+  {% for trip in object_list %}
+    <li class="trip">{{ trip }} </li>
+  {% endfor %}
+</ul>
+
+<a href="{% url "trip-new" %}">Create New</a>
+
+
+{% endblock  %}

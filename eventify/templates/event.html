@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+
+    {% if user == event.user %}
+        This user belongs to the event
+    {% else %}
+        No access to event
+    {% endif %}
+
+{% else %}
+    <p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+<h1>{{ event }}</h1>
+
+<p>Event name: {{ event.event_name }}</p>
+    <p>Event date: {{ event.event_date }}</p>
+    <p>Event name: {{ event.user.username }}</p>
+
+    <h2> Gæster</h2>
+<ul>
+{% for guest in event.guest_set.all %}
+   <li>{{ guest.guset_name }} -  {{ guest.guest_email }} - {{ guest.wish }} </li>
+{% endfor %}
+</ul>
+
+    <h2>Ønsker</h2>
+<ul>
+{% for wish in event.wish_set.all %}
+   <li>{{ wish.wish_name }} -  {{ wish.wish_url }} - Fra: {{ wish.wish_price_low }} -> {{ wish.wish_price_high }} </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

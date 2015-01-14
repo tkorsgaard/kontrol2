@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>Add Trip</h1>
+
+<form action="{% url "trip-new" %}" method="POST">
+  {% csrf_token %}
+  <ul>
+    {{ form.as_p }}
+  </ul>
+  <input id="save_event" type="submit" value="Save" />
+</form>
+
+<a href="{% url "trip-list" %}">back to list</a>
+
+{% endblock %}
