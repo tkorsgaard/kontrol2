@@ -4,9 +4,9 @@
     <data-source source="LOCAL" name="Django default" uuid="509595a5-7d73-423a-98bd-f21d500e674d">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/django_eventify</jdbc-url>
-      <user-name>django</user-name>
-      <user-password>dfcedfc0dfcbdfc4dfcddfc5</user-password>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/kontrol</jdbc-url>
+      <user-name>admin6k6s3hz</user-name>
+      <user-password>dfe3df87df99dfdedfdddfcbdf99df9fdffcdf93dfd8dfda</user-password>
       <libraries />
     </data-source>
   </component>

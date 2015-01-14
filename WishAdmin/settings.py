@@ -63,16 +63,29 @@ WSGI_APPLICATION = 'WishAdmin.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'django_eventify',
+#        'USER': 'django',
+#        'PASSWORD': 'django',
+#        'HOST': '127.0.0.1',
+#        'PORT': '5432',
+#    }
+#}
+
+#For production
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_eventify',
-        'USER': 'django',
-        'PASSWORD': 'django',
+        'NAME': 'kontrol',
+        'USER': 'admin6k6s3hz',
+        'PASSWORD': 'I-3twa35V9rp',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
